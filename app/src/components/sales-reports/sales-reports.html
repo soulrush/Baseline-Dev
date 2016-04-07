@@ -1,0 +1,18 @@
+<table width="100%" class="table">
+  <thead>
+  <tr>
+    <th>Game</th>
+    <th>Total</th>
+  </tr>
+  </thead>
+  <!--
+  <tfoot>
+  <tr>
+    <td colspan="3" class="text-center"><b>Total:</b> {{ctrl.SalesHistoryService.grandTotal() | currency}}</td>
+  </tr>
+  </tfoot>-->
+  <tr ng-repeat="(key,val) in ::ctrl.salesPerGame">
+    <td>{{key}}</td>
+    <td>{{val | currency}}</td>
+  </tr>
+</table>

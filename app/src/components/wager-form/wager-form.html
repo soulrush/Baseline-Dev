@@ -1,0 +1,22 @@
+<form name="ctrl.form" ng-submit="ctrl.onSubmit()" novalidate class="css-form">
+  <div class="form-group">
+    <label class="control-label">Game</label>
+    <select name="" class="form-control" ng-model="ctrl.game" required >
+      <option ng-repeat="game in ctrl.games">{{game.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Price</label>
+    <input type="number" class="form-control" ng-model="ctrl.price" required />
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Repeats</label>
+    <input type="number" class="form-control" ng-model="ctrl.repeats" required />
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary" ng-disabled="ctrl.form.$invalid">Commit</button>
+  </div>
+</form>

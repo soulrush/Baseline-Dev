@@ -1,0 +1,23 @@
+<table width="100%" class="table" ng-show="ctrl.SalesHistoryService.salesList.length">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Number of wagers</th>
+    <th>Total price</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td colspan="3" class="text-center"><b>Total:</b> {{ctrl.SalesHistoryService.grandTotal() | currency}}</td>
+  </tr>
+  </tfoot>
+  <tr ng-repeat="sale in ctrl.SalesHistoryService.salesList">
+    <td>{{sale.id}}</td>
+    <td>{{sale.numberOfWagers}}</td>
+    <td>{{sale.total | currency}}</td>
+  </tr>
+</table>
+
+<div ng-hide="ctrl.SalesHistoryService.salesList.length" class="text-center">
+  <span class="bg-danger">You haven't sold anything, c'mon!</span>
+</div>

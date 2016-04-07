@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-sm-6">{{name}}</div>
+      <div class="col-sm-6 text-right"><button ng-click="ctrl.toggleSection()" class="btn-success">{{ctrl.show ? "-": "+"}}</button></div>
+    </div>
+
+
+  </div>
+  <div class="panel-body"  ng-transclude  ng-show="ctrl.show">
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>AOR new wagering terminal</title>
+  </head>
+
+  <body>
+
+    <h1>New AOR</h1>
+
+    <div ng-app="wageringApp" ng-controller="MainCtrl as mainCtrl">
+      <div class="text-center panel panel-default">
+        <div class="btn-group panel-body">
+          <button class="btn-warning well-sm" ng-click="mainCtrl.changeState('dashboard')">DashBoard</button>
+          <button class="btn-warning well-sm" ng-click="mainCtrl.changeState('history')">History</button>
+          <button class="btn-warning well-sm" ng-click="mainCtrl.changeState('reports')">Reports</button>
+        </div>
+      </div>
+      <div ui-view="dashboard"></div>
+    </div>
+
+    <script src="lib/angular.js" type="text/javascript"></script>
+    <script src="lib/angular-ui-router.js" type="text/javascript"></script>
+
+    <script src="lib/underscore.js"></script>
+    <script src="lib/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-prompt.js"></script>
+
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/wager-factory.js" type="text/javascript"></script>
+    <script src="scripts/quickPick-controller.js" type="text/javascript"></script>
+    <script src="components/section/section-directive.js" type="text/javascript"></script>
+    <script src="components/wager-form/wager-form-directive.js" type="text/javascript"></script>
+
+    <script src="components/sales-list/sales-list-directive.js" type="text/javascript"></script>
+    <script src="services/sales-history-service/sales-history-service.js" type="text/javascript"></script>
+    <script src="components/sales-history/sales-history-directive.js" type="text/javascript"></script>
+    <script src="components/sales-reports/sales-reports-directive.js" type="text/javascript"></script>
+
+  </body>
+</html>

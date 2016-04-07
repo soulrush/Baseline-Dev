@@ -1,0 +1,26 @@
+<table width="100%" class="table" ng-show="ctrl.WagerFactory.products.length">
+  <thead>
+  <tr>
+    <th>Game</th>
+    <th>Price</th>
+    <th style="text-align:center;">Remove?</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td class="text-center" colspan="3"><b>Total:</b> {{ctrl.WagerFactory.calcTotal() | currency}}</td>
+  </tr>
+  </tfoot>
+  <tr ng-repeat="product in ctrl.WagerFactory.products">
+    <td>{{product.name}} <b>{{(product.qped)?'QP':""}}</b></td>
+    <td>{{product.price  | currency}}</td>
+    <td align="center">
+      <button ng-click="ctrl.WagerFactory.removeProduct(product.id)" class="btn-danger">X</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" class="text-center">
+      <button name="clear" ng-click="ctrl.WagerFactory.sellWagers()" class="btn-success text-center h3 well-lg">Sell!</button>
+    </td>
+  </tr>
+</table>
